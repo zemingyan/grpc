@@ -1,4 +1,4 @@
-package com.example.first.self;
+package com.example.first.stream;
 
 import com.example.first.demostream.MetricsClient;
 import com.example.first.demostream.MetricsServer;
