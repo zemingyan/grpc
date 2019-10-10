@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_package = "com.example.message";
+option java_multiple_files = true;
+option java_outer_classname = "MessageTransport";
+
+message Information{
+    string context = 20;
+    int64 id = 1;
+}

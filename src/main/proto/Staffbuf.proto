@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_package = "org.serialization.protobuf.advanced";
+option java_multiple_files = true;
+option java_outer_classname = "Staffbuf";
+message Staff {
+    int32 id = 1;
+    string name = 2;
+    string email =3;
+
+    enum PhoneType{
+        MOBILE = 0;
+        TELEPHONE = 1;
+    }
+
+    message PhoneNumber{
+        string number = 1;
+        PhoneType type = 2;
+    }
+
+    //list
+    repeated PhoneNumber phones =4;
+
+    message Map{
+        string key = 1;
+        string value = 2;
+    }
+    Map map = 5;
+}

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+
+option java_package = "com.example.selfTest";
+option java_multiple_files = true;
+option java_outer_classname = "SelfTestBuf";
+
+enum Type{
+    FIRST = 0;
+    SECOND = 1;
+}
+
+
+message SelfReq{
+    int32 uid = 1;
+    Type type = 2;
+    string phoneNumber = 3;
+}
+
+message SelfResp{
+    string result = 1;
+}
+message SerialReq{
+    bytes data = 1;
+}
+service SelfTestService {
+    rpc firstService(SelfReq) returns (SelfResp);
+    rpc serial(SerialReq) returns (SelfResp);
+}

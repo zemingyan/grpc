@@ -1,0 +1,14 @@
+syntax="proto3";
+import "PhoneNumberBuf.proto"; // 引入消息
+option java_multiple_files = true;
+option java_package = "org.serialization.protobuf.imported";
+option java_outer_classname = "Staffbuf";
+message CombinationStaff  {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+
+    // 引入的消息类型
+    repeated PhoneNumber phone = 4;
+
+}
