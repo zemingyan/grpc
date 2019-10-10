@@ -1,4 +1,11 @@
 HELP.md
+
+target/classes
+target/test-classes
+target/generated-test-sources
+target/protoc-dependencies
+target/protoc-plugins
+
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
